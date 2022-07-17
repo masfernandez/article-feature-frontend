@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "6.1.1",
+    "@fortawesome/free-solid-svg-icons": "6.1.1",
+    "@fortawesome/react-fontawesome": "0.2.0",
     "@reduxjs/toolkit": "1.7.1",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",
@@ -60,6 +63,7 @@
     "stylelint-processor-styled-components": "1.10.0",
     "ts-node": "10.4.0",
     "typescript": "4.5.4",
+    "uuid": "8.3.2",
     "web-vitals": "2.1.2"
   },
   "scripts": {
@@ -75,12 +79,9 @@
     "lint:fix": "yarn run eslint --fix src",
     "lint:css": "stylelint src/**/*.css",
     "generate": "plop --plopfile internals/generators/plopfile.ts",
-    "cleanAndSetup": "ts-node ./internals/scripts/clean.ts",
     "prettify": "prettier --write",
-    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
