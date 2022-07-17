@@ -1,28 +1,17 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
 import { ReactComponent as DocumentationIcon } from './assets/documentation-icon.svg';
-import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
 
 export function Nav() {
   return (
     <Wrapper>
       <Item
-        href="https://cansahin.gitbook.io/react-boilerplate-cra-template/"
-        target="_blank"
-        title="Documentation Page"
+        href={process.env.PUBLIC_URL + '/'}
+        title="Home"
         rel="noopener noreferrer"
       >
         <DocumentationIcon />
-        Documentation
-      </Item>
-      <Item
-        href="https://github.com/react-boilerplate/react-boilerplate-cra-template"
-        target="_blank"
-        title="Github Page"
-        rel="noopener noreferrer"
-      >
-        <GithubIcon />
-        Github
+        Home
       </Item>
     </Wrapper>
   );
@@ -34,7 +23,7 @@ const Wrapper = styled.nav`
 `;
 
 const Item = styled.a`
-  color: ${p => p.theme.primary};
+  color: rgba(215, 113, 88, 1);
   cursor: pointer;
   text-decoration: none;
   display: flex;
